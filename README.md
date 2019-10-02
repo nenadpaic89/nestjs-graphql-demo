@@ -1,1 +1,1 @@
-# Magic Inside Us backend service
+# Demo NestJS GraphQL
