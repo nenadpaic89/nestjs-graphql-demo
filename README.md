@@ -1,1 +1,1 @@
-# Demo NestJS GraphQLp
+# Demo NestJS GraphQL
