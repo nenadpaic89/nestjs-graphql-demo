@@ -30,9 +30,6 @@ export class PostService {
       where: [
         {Active: true, Archive: false},
       ],
-      order: {
-        Created: 'DESC',
-      },
       skip: pagination.offset,
       take: pagination.limit,
     });
@@ -57,7 +54,11 @@ export class PostService {
   }
 
   async createPost(post: PostInputType) {
-    console.log('Updating post', post);
+    const postCreate = await this.postRepository.save({
+      ...post,
+      Slug: post.Title
+    });
+    return post;
   }
 
   /**

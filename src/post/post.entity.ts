@@ -33,17 +33,5 @@ export class PostEntity {
   Active: boolean;
 
   @Column()
-  StartOn: Date;
-
-  @Column()
-  Stop: Date;
-
-  @Column()
   Archive: boolean;
-
-  @Column()
-  Created: Date;
-
-  @Column()
-  Updated: Date;
 }

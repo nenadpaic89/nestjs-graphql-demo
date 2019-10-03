@@ -1,4 +1,5 @@
 import { ObjectType, Field, ID } from 'type-graphql';
+import { Author } from './author';
 
 @ObjectType()
 export class Post {
@@ -31,17 +32,8 @@ export class Post {
   Active: boolean;
 
   @Field()
-  StartOn: Date;
-
-  @Field()
-  Stop: Date;
-
-  @Field()
   Archive: boolean;
 
   @Field()
-  Created: Date;
-
-  @Field()
-  Updated: Date;
+  author: Author;
 }

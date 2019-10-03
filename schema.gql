@@ -3,10 +3,10 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
-"""
-The javascript `Date` as string. Type represents date and time as the ISO Date string.
-"""
-scalar DateTime
+type Author {
+  id: Float!
+  name: String!
+}
 
 type Mutation {
   createPost(postInput: PostInputType!): Post!
@@ -22,11 +22,8 @@ type Post {
   Content: String!
   Featured: Boolean!
   Active: Boolean!
-  StartOn: DateTime!
-  Stop: DateTime!
   Archive: Boolean!
-  Created: DateTime!
-  Updated: DateTime!
+  author: Author!
 }
 
 input PostInputType {
